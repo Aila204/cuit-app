@@ -22,7 +22,7 @@
        @csrf
       <div class="mb-4">
         <label class="block text-sm mb-1">Email or Username</label>
-        <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500" name="username" placeholder="you@example.com" />
+        <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500" name="email" placeholder="you@example.com" />
       </div>
       <div class="mb-4">
         <label class="block text-sm mb-1">Password</label>
