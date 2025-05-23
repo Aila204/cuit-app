@@ -27,7 +27,7 @@ class AuthController extends Controller
     public function login(Request $request): RedirectResponse
     {
         if (Auth::attempt([
-            'email' => $request->email,
+            'email' => $request->username,
             'password' => $request
          ])) {
             $user = User::where('email', $request->email)->first();
