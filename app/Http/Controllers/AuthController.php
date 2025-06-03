@@ -28,16 +28,16 @@ class AuthController extends Controller
     {
         if (Auth::attempt([
             'email' => $request->email,
-            'password' => $request
+            'password' => $request->password
          ])) {
             $user = User::where('email', $request->email)->first();
             Auth::login($user);
-            return redirect('home')->route('home');
+            return redirect('/');
          }
          return redirect()->back()->withErrors([
             'error' => 'Email or Password is incoret',
          ]); 
-         }
+    }
         public function logout(Request $request): RedirectResponse
         {
             Auth::logout();
